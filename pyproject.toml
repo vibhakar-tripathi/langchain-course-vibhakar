@@ -1,0 +1,14 @@
+[project]
+name = "react-langchain"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=26.1.0",
+    "dotenv>=0.9.9",
+    "isort>=7.0.0",
+    "langchain>=1.2.10",
+    "langchain-classic>=1.0.1",
+    "langchain-ollama>=1.0.1",
+]
