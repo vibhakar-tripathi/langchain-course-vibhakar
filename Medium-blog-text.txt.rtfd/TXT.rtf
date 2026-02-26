@@ -1,0 +1,961 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;\f2\fnil\fcharset0 Georgia-BoldItalic;
+\f3\fnil\fcharset0 Georgia-Italic;\f4\fnil\fcharset0 Georgia;\f5\fnil\fcharset0 Georgia-Bold;
+\f6\fnil\fcharset0 AppleColorEmoji;\f7\fnil\fcharset0 HelveticaNeue-Medium;}
+{\colortbl;\red255\green255\blue255;\red88\green88\blue88;\red27\green27\blue27;\red0\green0\blue0;
+\red255\green255\blue255;\red227\green241\blue226;\red0\green0\blue0;\red239\green239\blue239;\red19\green19\blue19;
+\red0\green0\blue0;\red247\green247\blue247;}
+{\*\expandedcolortbl;;\cssrgb\c41961\c41961\c41961;\cssrgb\c14118\c14118\c14118;\cssrgb\c0\c0\c0\c80000;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c90980\c95294\c90980;\cssrgb\c0\c0\c0;\cssrgb\c94902\c94902\c94902;\cssrgb\c9804\c9804\c9804;
+\cssrgb\c0\c0\c0\c84706;\cssrgb\c97647\c97647\c97647;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid401\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
+{\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sa640\partightenfactor0
+
+\f1\b\fs84 \cf3 Vector Database: What is it and why you should know it?
+\f0\b0\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\i\b\fs40 \cf3 \'93If 2021 was the year of graph databases, 2023 is the year of vector databases\'94 \'97\'a0{\field{\*\fldinst{HYPERLINK "https://huyenchip.com/"}}{\fldrslt \ul Chip Huen}}.
+\f3\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\i0 \cf3 Why? you ask...\
+Well, it\'92s because\'a0{\field{\*\fldinst{HYPERLINK "https://www.techtarget.com/searchenterpriseai/definition/generative-AI"}}{\fldrslt \ul Generative AI}}\'a0and\'a0{\field{\*\fldinst{HYPERLINK "https://machinelearningmastery.com/what-are-large-language-models/"}}{\fldrslt \ul Large Language Models (LLMs)}}\'a0are now popular and one of the best ways to handle LLM data is with a vector database because vector databases provide the ideal infrastructure for managing the complex, high-dimensional data that LLMs produce and thrive on.\
+In this article, we\'92ll discuss what vector databases are, how they work, and some excellent vector database tools you should check out.\
+Before we dive into vector databases, let\'92s first understand what a vector is.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 What is a Vector?\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs40 \cf3 In machine learning (ML), a vector is a collection of numerical values that represent the characteristics or features of multi-dimensional objects such as words, images, etc.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40junxie2%2Fvector-in-machine-learning-a24880e3b96a&psig=AOvVaw3-f0xaN8JU_aP9kxhI2JYG&ust=1699645006697000&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCLCLmZnVt4IDFQAAAAAdAAAAABAQ"}}{\fldrslt 
+\fs28 \cf2 \ul \ulc2 source}}
+\fs28 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 For\'a0example, a\'a0{\field{\*\fldinst{HYPERLINK "https://medium.com/@junxie2/vector-in-machine-learning-a24880e3b96a"}}{\fldrslt \ul vector}}\'a0representing an image might contain values corresponding to the pixel intensities of the image, in the order of the image\'92s color channels.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://what-when-how.com/introduction-to-video-and-image-processing/neighborhood-processing-introduction-to-video-and-image-processing-part-1/#google_vignette"}}{\fldrslt 
+\fs28 \cf2 \ul \ulc2 Source}}
+\fs28 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 What are Embeddings?\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs40 \cf3 \cb6 An embedding is a technique for representing complex data, such as images, text, or audio, as numerical vectors.\cb1 \
+These embeddings capture the essence of the data and show clearly the semantic similarity (or relationship) between different objects, with similar objects having vectors that are close to each other in the vector space. Thus, ML algorithms allow them to be efficiently processed and analyzed.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://arize.com/blog-course/embeddings-meaning-examples-and-how-to-compute/"}}{\fldrslt 
+\fs28 \cf2 \ul \ulc2 source}}
+\fs28 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 ML models often generate embeddings as part of their training process. For LLMs, an\'a0{\field{\*\fldinst{HYPERLINK "https://medium.com/@ryanntk/choosing-the-right-embedding-model-a-guide-for-llm-applications-7a60180d28e3"}}{\fldrslt \ul embedding model}}\'a0is put in place to create the embeddings\
+Embeddings are vectors that represent the essential features of a data point. For example, a natural language processing model might generate embeddings for words or sentences.\
+Embeddings can be used for a variety of tasks, such as clustering, classification, and anomaly detection. Vector databases can be used to store and query embeddings efficiently, which makes them ideal for ML applications.\
+To see what embeddings look like, check out this\'a0{\field{\*\fldinst{HYPERLINK "http://vectorizer-kappa.vercel.app/"}}{\fldrslt \ul Vectorizer}}\'a0created by\'a0{\field{\*\fldinst{HYPERLINK "https://twitter.com/kenny_io"}}{\fldrslt \ul Kenny}}, it converts texts to embeddings.\
+\pard\pardeftab720\partightenfactor0
+
+\f3\i \cf3 Note: An embedding is a vector representation, but not all vectors are embeddings
+\f4\i0 .\
+Putting it all together, let us define a vector database.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 What is a Vector Database?\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs40 \cf3 A vector database is a type of database that stores and manages unstructured data, such as text, images, or audio, in high-dimensional vectors, to make it easy to find and retrieve similar objects quickly at scale in production.\
+They work by using algorithms like vector similarity search to index and query vector embeddings,\
+The importance of vector databases in LLM projects lies in their ability to provide easy search, high performance, scalability, and data retrieval by comparing values and finding similarities between them\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 Vector database\'92s search capabilities can be used in various applications ranging from classical ML use cases, such as recommender systems, to providing long-term memory to large language models in modern applications, to text understanding, video summarization, drug discovery, stock market analysis, and much more.\
+As data continues to grow in complexity and volume, the scalability, speed, and accuracy offered by vector databases position them as a critical tool for extracting meaningful insights and unlocking new opportunities across various domains.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 What are the benefits of Vector Databases?\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs40 \cf3 Here are some specific reasons why vector databases are so well-suited for LLMs and generative AI:\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 Handling Massive Data Loads\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0 \cf3 Vector databases can handle the massive amounts of data that are generated by LLMs and generative AI. Traditional databases might struggle with the millions or even billions of data points produced in a single run, but vector databases are purpose-built to handle such large datasets with efficiency.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 Efficient Similarity Searches\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0 \cf3 Vector databases can find data that is similar to a given query vector. This is essential for tasks such as image search and content recommendation, which are often used in conjunction with LLMs and generative AI. For example, if you are using an LLM to generate a new image, you can use a vector database to find other images that are similar to the generated image.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 Integration with ML Algorithms\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0 \cf3 Vector databases can be integrated with machine learning algorithms. This makes it easy to use vector databases to train and evaluate machine learning models. For example, you can use a vector database to store the data that is used to train a model, and then use the vector database to search for the data that is most relevant to the model.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 Handling Vector Embeddings\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0 \cf3 Vector databases provide a superior solution for handling vector embeddings by addressing the limitations of standalone vector indices, such as scalability challenges, cumbersome integration processes, and the absence of real-time updates and built-in security measures.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 List of Some Top Vector Databases\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs40 \cf3 There are several vector database solutions available in the market, each with its own set of features and capabilities. Some of the top vector database solutions include:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Chroma DB\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Qdrant\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Milvus\
+\pard\pardeftab720\partightenfactor0
+\cf3 Here\'92s an overview of some of the features of these vector databases. You can go see this comprehensive\'a0{\field{\*\fldinst{HYPERLINK "https://docs.google.com/spreadsheets/d/170HErOyOkLDjQfy3TJ6a3XXXM1rHvw_779Sit-KT7uc/edit?usp=sharing"}}{\fldrslt \ul vector database features matrix}}\'a0by\'a0{\field{\*\fldinst{HYPERLINK "https://www.linkedin.com/in/dhruv-anand-ainorthstartech/overlay/about-this-profile/"}}{\fldrslt \ul Dhruv Anand}}\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs28 \cf2 Source: Author\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 Weaviate\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://weaviate.io/"}}{\fldrslt 
+\f4\b0\fs40 \cf3 \ul \ulc3 Weaviate}}
+\f4\b0\fs40 \'a0is an open-source vector database that can be used to store, search, and manage vectors of any dimensionality. It is designed to be scalable and easy to use, and it can be deployed on-premises or in the cloud.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 Features:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate can store and search vectors from various data modalities, including images, text, and audio.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate provides seamless integration with machine learning frameworks such as Hugging Face, Open AI, LangChain, Llamaindex, TensorFlow, PyTorch, and Scikit-learn.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate can index vectors in real-time, making it ideal for applications that require\'a0{\field{\*\fldinst{HYPERLINK "https://blog.twitter.com/engineering/en_us/topics/infrastructure/2020/reducing-search-indexing-latency-to-one-second"}}{\fldrslt \ul low-latency search}}.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate can be scaled to handle large volumes of data and high query throughput.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate can be used in memory for fast search or with disk-based storage for larger datasets.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Weaviate provides a user-friendly interface for managing vectors and performing searches.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 Pinecone\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.pinecone.io/"}}{\fldrslt 
+\f4\b0\fs40 \cf3 \ul \ulc3 Pinecone}}
+\f4\b0\fs40 \'a0is a fully managed cloud-based vector database that is designed to make it easy for businesses and organizations to build and deploy large-scale ML applications.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b\fs40 \cf3 Some Pinecone Features:
+\f4\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone is designed to be fast and scalable, allowing for efficient retrieval of similar data points based on their vector representations.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+It can handle large-scale ML applications with millions or billions of data points.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone provides infrastructure management or maintenance to its users.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone can handle high query throughput and low latency search.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone is a secure platform that meets the security needs of businesses and organizations.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone is designed to be user-friendly and accessible via its simple API for storing and retrieving vector data, making it easy to integrate into existing ML workflows.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone supports real-time updates, allowing for efficient updates to the vector database as new data points are added. This ensures that the vector database remains up-to-date and accurate over time.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Pinecone can be synced with data from various sources using tools like Airbyte and monitored using Datadog\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 Chroma DB\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://www.trychroma.com/"}}{\fldrslt 
+\f4\b0\fs40 \cf3 \ul \ulc3 Chroma DB}}
+\f4\b0\fs40 \'a0is an open-source vector store for storing and retrieving vector embeddings. It is mainly used to save embeddings along with metadata to be used later by LLMs and can also be used for semantic search engines over text data.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 Chroma DB offers a self-hosted server option and supports different underlying storage options like DuckDB for standalone or ClickHouse for scalability.\
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs36 \cf4 Get\'a0Ejiro Onose\'92s stories in\'a0your\'a0inbox\cf0 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\f0\fs28 \cf2 Join Medium for free to get updates from\'a0this\'a0writer.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \cb8 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb9 Subscribe
+\fs24 \cf4 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 Chroma DB offers two memory modes:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The in-memory mode\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+The persistent memory\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b \cf3 The in-memory mode
+\f4\b0 \'a0is used for rapid testing, providing proof of concept (POC) and querying, allowing the reuse of collections between runs.\
+
+\f5\b The persistent memory
+\f4\b0 \'a0allows users to save and load data to and from a disk, causing the persistence of the database beyond the current session. This allows for the addition and deletion of documents after collection creation, and it is essential for production use cases where an in-memory database is not sufficient.\
+Some of the key features of Chroma DB are:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Chroma DB supports different underlying storage options like DuckDB for standalone or ClickHouse for scalability.\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+It provides SDKs for Python and JavaScript/TypeScript and focuses on simplicity, speed, and enabling analysis.\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Chroma can store vectors from various data types, including text, images, and audio.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 Qdrant\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://qdrant.tech/documentation/overview/"}}{\fldrslt 
+\f4\b0\fs40 \cf3 \ul \ulc3 Qdrant}}
+\f4\b0\fs40 \'a0is an open-source vector database and vector search engine that provides fast and scalable vector similarity search services with additional payloads.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 Here are some of the features of Qdrant:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Qdrant offers support for disk-stored collections, as storage space is cheaper than memory. It has introduced the Scalar Quantization mechanism recently, which makes it possible to reduce the memory requirements by up to four times.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Qdrant allows users to express more complex conditions for nested structures.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+It provides an asynchronous I/O interface that reduces overhead by managing I/O operations asynchronously, thus minimizing context switches.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+It uses distance metrics to measure similarities among vectors, and they must be selected at the same time you are creating a collection.\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+It can be used with the Python quadrant client, which provides a convenient API to store, search, and manage points (i.e., vectors) with an additional payload.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 Milvus\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://milvus.io/"}}{\fldrslt 
+\f4\b0\fs40 \cf3 \ul \ulc3 Milvus}}
+\f4\b0\fs40 \'a0is an open-source vector database that is designed for similarity searches in dense vector datasets containing millions or even billions of vectors. Milvus vector database adopts a\'a0{\field{\*\fldinst{HYPERLINK "https://milvus.io/docs/architecture_overview.md"}}{\fldrslt \ul systemic approach to cloud-nativity}}\'a0by separating compute from storage and allowing you to scale both up and out.\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 Press enter or click to view image in full size\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://milvus.io/docs/overview.md"}}{\fldrslt 
+\fs28 \cf2 \ul \ulc2 Milvus docs}}
+\fs28 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf3 Here are some of the features of Milvus:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls7\ilvl0\cf3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Milvus uses a distributed architecture that separates storage and computing, allowing for horizontal scalability in computing nodes.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Milvus can be scaled to handle trillions of vectors and millions of queries per second.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Milvus supports various data types, and it provides enhanced vector similarity search with attribute filtering, UDF support, configurable consistency level, time travel, and more\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Milvus can handle high query throughput and low latency searches.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+To help users try Milvus quicker, Bin Ji, a top contributor to the Milvus community, developed\'a0{\field{\*\fldinst{HYPERLINK "https://milvus.io/docs/milvus_lite.md"}}{\fldrslt \ul Milvus Lite}}, a lightweight version of Milvus. It can help you get started with Milvus in minutes, while at the same time offering many benefits.\
+\ls7\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Milvus provides a user-friendly interface for managing vectors and performing searches.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs48 \cf3 How To Choose The Right Vector Database For Your LLM Projects\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b0\fs40 \cf3 To choose the right vector database for LLM projects, there are some factors you should consider. They include:\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b \cf3 Scalability
+\f4\b0 : Since LLMs generate and consume vast amounts of vector data, it is best to choose a database that can efficiently store and manage large-scale datasets without compromising performance. Also, the vector database must be able to seamlessly handle future data additions and expansion of your LLM project\'92s scope.\
+
+\f5\b Performance:\'a0
+\f4\b0 It should deliver fast query execution and swift retrieval of relevant vectors. It should also efficiently handle multi-dimensional queries and complex similarity searches.\
+
+\f5\b Security:\'a0
+\f4\b0 The database should provide robust security features, including encryption, access controls, and authentication mechanisms. For use cases with personal or sensitive data, the vector database should align with applicable privacy regulations.\
+
+\f5\b Cost:\'a0
+\f4\b0 Using LLM APIs already costs a fortune when running at scale, so you look out for a vector base. with flexible pricing models and one that fits your use case.\
+
+\f5\b Query interfaces
+\f4\b0 : Evaluate the ease of interaction with the database, including available query languages, APIs, and user interfaces.\
+
+\f5\b Deployment options:
+\f4\b0 \'a0Make sure the vector database whether cloud-based, on-premise, or hybrid solutions matches your infrastructure preferences and data sensitivity.\
+
+\f5\b Integration capabilities
+\f4\b0 : Ensure seamless integration with your existing LLM infrastructure and other tools in your workflow.\
+Yep! That\'92s it.\
+Vector databases are generally useful when building LLM applications because they serve as an abstraction layer for handling and managing LLM data.\
+Let me know what you think about the vector database tools mentioned here and I hear there are some really interesting vector db out there. If you have used any, please comment on what your experience was like.\
+
+\f5\b Happy Building!
+\f4\b0 \
+\'85.also you could\'a0{\field{\*\fldinst{HYPERLINK "https://buymeacoffee.com/ejiro"}}{\fldrslt \ul buy me coffee}}\'a0\'85pretty please
+\f6 \uc0\u55358 \u56599 \u55358 \u56599 
+\f4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/tag/vector-database?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\f0\fs28 \cf3 \cb8 Vector Database\
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/tag/llm?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\f0\fs28 \cf3 \cb8 LLM\
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/tag/embedding?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\f0\fs28 \cf3 \cb8 Embedding\
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/tag/vector?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\f0\fs28 \cf3 \cb8 Vector\
+}}\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb5 342\cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs28 \cf2 \cb5 1\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose?source=post_page---post_author_info--ae7e7dca82a4---------------------------------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f7\fs40 \cf3 Written by\'a0Ejiro Onose\
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/followers?source=post_page---post_author_info--ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs28 \cf2 173 followers}}\
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf2 \'b7\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/following?source=post_page---post_author_info--ae7e7dca82a4---------------------------------------"}}{\fldrslt \cf2 257 following}}\
+\pard\pardeftab720\partightenfactor0
+\cf3 Still working on this....\
+\pard\pardeftab720\qc\partightenfactor0
+\cf3 Follow\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\f7\fs48 \cf3 Responses (1)\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf3 \cb8 {{\NeXTGraphic 1*dmbNkD5D-u45r44go_cf0g.png \width1280 \height1280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf3 \
+\pard\pardeftab720\partightenfactor0
+\cf3 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 Write a response\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2F%40EjiroOnose%2Fvector-database-what-is-it-and-why-you-should-know-it-ae7e7dca82a4&source=---post_responses--ae7e7dca82a4---------------------respond_sidebar------------------"}}{\fldrslt \cf2 \cb8 What are your thoughts?\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \cb8 Cancel
+\fs28 \cf2 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs26 \cf5 \cb9 Respond\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@phenrysay?source=post_page---post_responses--ae7e7dca82a4----0-----------------------------------"}}{\fldrslt 
+\fs24 \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf3 Pierre-Henry\'99
+\fs24 \cf4 \
+\
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://phenrysay.medium.com/excellent-post-059c4772c140?source=post_page---post_responses--ae7e7dca82a4----0-----------------------------------"}}{\fldrslt \cf2 \cb1 Jul 13, 2025\'a0(edited)\
+}}\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf3 Excellent post Ejiro! 
+\f6 \uc0\u55357 \u56396 
+\f0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \ul \ulc3 Reply\ulnone \
+\pard\pardeftab720\partightenfactor0
+
+\f7\fs48 \cf3 \cb11 More from\'a0Ejiro Onose\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose?source=post_page---author_recirc--ae7e7dca82a4----0---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \cb11 Ejiro Onose}}\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/understanding-docs-as-code-01b8c7644e23?source=post_page---author_recirc--ae7e7dca82a4----0---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 Understanding Docs-as-Code
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 Good documentation is an essential part of any software project.
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Nov 19, 2024\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/understanding-docs-as-code-01b8c7644e23?source=post_page---author_recirc--ae7e7dca82a4----0---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 58\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose?source=post_page---author_recirc--ae7e7dca82a4----1---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \cb11 Ejiro Onose}}\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/deepseek-ocr-solving-llm-context-limits-with-optical-compression-7ab7c25b87ab?source=post_page---author_recirc--ae7e7dca82a4----1---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 DeepSeek-OCR: Solving LLM Context Limits with Optical Compression
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 If you\'92ve ever tried to make an LLM analyze a massive PDF, a long codebase, or a lengthy conversation, you\'92ve hit the wall.
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Nov 17, 2025\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/deepseek-ocr-solving-llm-context-limits-with-optical-compression-7ab7c25b87ab?source=post_page---author_recirc--ae7e7dca82a4----1---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 3\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose?source=post_page---author_recirc--ae7e7dca82a4----2---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \cb11 Ejiro Onose}}\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/llms-on-trial-the-african-llm-evaluation-benchmarks-edition-9658fcf62642?source=post_page---author_recirc--ae7e7dca82a4----2---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 LLMs on Trial: The African LLM Evaluation Benchmarks Edition
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 What happens when the jury that evaluates LLMs only represents a fraction of the world? This is the current reality for Al in Africa
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Jul 18, 2025\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/llms-on-trial-the-african-llm-evaluation-benchmarks-edition-9658fcf62642?source=post_page---author_recirc--ae7e7dca82a4----2---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 1\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose?source=post_page---author_recirc--ae7e7dca82a4----3---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \cb11 Ejiro Onose}}\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/2023-year-in-review-fa07e551137c?source=post_page---author_recirc--ae7e7dca82a4----3---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 2023: Year in Review
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 Every year since 2020, I have always wanted to write a review of my year but I have yet to come around to do it. I either completely forget\'85
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Dec 31, 2023\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose/2023-year-in-review-fa07e551137c?source=post_page---author_recirc--ae7e7dca82a4----3---------------------b9ad9263_f1a0_4366_a57e_3f5be99ceec4--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 58\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@EjiroOnose?source=post_page---author_recirc--ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs28 \cf3 \cb11 See all from\'a0Ejiro Onose\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\f7\fs48 \cf3 \cb11 Recommended from Medium\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/gitconnected?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 In\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/gitconnected?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Level Up Coding}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 by\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@fareedkhandev?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Fareed Khan}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/gitconnected/building-a-scalable-production-grade-agentic-rag-pipeline-1168dcd36260?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 Building a Scalable, Production-Grade Agentic RAG Pipeline
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 Autoscaling, Evaluation, AI Compute Workflows and more
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Jan 1\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/gitconnected/building-a-scalable-production-grade-agentic-rag-pipeline-1168dcd36260?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 1.5K\cb1 \
+\
+\cb11 17\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/womenintechnology?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 In\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/womenintechnology?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Women in Technology}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 by\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@akovtun?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Alina Kovtun
+\f6 \uc0\u10024 }}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/womenintechnology/stop-memorizing-design-patterns-use-this-decision-tree-instead-e84f22fca9fa?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 Stop Memorizing Design Patterns: Use This Decision Tree Instead
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 Choose design patterns based on pain points: apply the right pattern with minimal over-engineering in any OO language.
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Jan 29\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/womenintechnology/stop-memorizing-design-patterns-use-this-decision-tree-instead-e84f22fca9fa?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 4.7K\cb1 \
+\
+\cb11 38\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/generative-ai?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 In\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/generative-ai?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Generative AI}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 by\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@adham__khaled__?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Adham Khaled}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/generative-ai/stanford-just-killed-prompt-engineering-with-8-words-and-i-cant-believe-it-worked-8349d6524d2b?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 Stanford Just Killed Prompt Engineering With 8 Words (And I Can\'92t Believe It Worked)
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 ChatGPT keeps giving you the same boring response? This new technique unlocks 2\'d7 more creativity from ANY AI model\uc0\u8202 \'97\u8202 no training required\'85
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Oct 20, 2025\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/generative-ai/stanford-just-killed-prompt-engineering-with-8-words-and-i-cant-believe-it-worked-8349d6524d2b?source=post_page---read_next_recirc--ae7e7dca82a4----0---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 24K\cb1 \
+\
+\cb11 638\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/towards-artificial-intelligence?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 In\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/towards-artificial-intelligence?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Towards AI}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 by\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@yadavdivy296?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Divy Yadav}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/towards-artificial-intelligence/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 9 RAG Architectures Every AI Developer Must Know: A Complete Guide with Examples
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 Architectures beyond Naive Rag to build reliable production AI Systems
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Dec 19, 2025\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/towards-artificial-intelligence/rag-architectures-every-ai-developer-must-know-a-complete-guide-f3524ee68b9c?source=post_page---read_next_recirc--ae7e7dca82a4----1---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 1.8K\cb1 \
+\
+\cb11 36\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@wlockett?source=post_page---read_next_recirc--ae7e7dca82a4----2---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf3 \cb11 Will Lockett
+\fs24 \cf4 \cb1 \
+\
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@wlockett/the-ai-bubble-is-about-to-burst-but-the-next-bubble-is-already-growing-383c0c0c7ede?source=post_page---read_next_recirc--ae7e7dca82a4----2---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 The AI Bubble Is About To Burst, But The Next Bubble Is Already Growing
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 Techbros are preparing their latest bandwagon.
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Sep 15, 2025\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@wlockett/the-ai-bubble-is-about-to-burst-but-the-next-bubble-is-already-growing-383c0c0c7ede?source=post_page---read_next_recirc--ae7e7dca82a4----2---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 22K\cb1 \
+\
+\cb11 973\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \cb11 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/activated-thinker?source=post_page---read_next_recirc--ae7e7dca82a4----3---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf4 \cb8 {{\NeXTGraphic Attachment.png \width320 \height320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb1 \
+}}\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 In\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/activated-thinker?source=post_page---read_next_recirc--ae7e7dca82a4----3---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Activated Thinker}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 by\cb1 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@intellizab?source=post_page---read_next_recirc--ae7e7dca82a4----3---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf3 \cb11 Shane Collins}}
+\fs24 \cf4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/activated-thinker/why-the-smartest-people-in-tech-are-quietly-panicking-right-now-d2feb86e7e4b?source=post_page---read_next_recirc--ae7e7dca82a4----3---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt 
+\f1\b\fs40 \cf3 \cb11 Why the Smartest People in Tech Are Quietly Panicking Right Now
+\f0\b0\fs24 \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb11 The water is rising fast, and your free version of ChatGPT is hiding the terrifying, exhilarating truth
+\fs24 \cf4 \cb1 \
+}}\pard\pardeftab720\qc\partightenfactor0
+
+\fs22 \cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs26 \cf2 \cb11 Feb 13\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb8 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/activated-thinker/why-the-smartest-people-in-tech-are-quietly-panicking-right-now-d2feb86e7e4b?source=post_page---read_next_recirc--ae7e7dca82a4----3---------------------4ead3cac_5ced_4bca_bbf8_b65faa05aa3b--------------"}}{\fldrslt \cf2 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb11 10.1K\cb1 \
+\
+\cb11 447\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf2 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \
+\pard\pardeftab720\qc\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/?source=post_page---read_next_recirc--ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs28 \cf3 \cb11 See more recommendations\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://help.medium.com/hc/en-us?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Help\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://status.medium.com/?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Status\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/about?autoplay=1&source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 About\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Careers\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "mailto:pressinquiries@medium.com"}}{\fldrslt 
+\fs26 \cf2 \cb11 Press\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://blog.medium.com/?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Blog\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Privacy\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://policy.medium.com/medium-rules-30e5502c4eb4?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Rules\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Terms\cb1 \
+}}\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://speechify.com/medium?source=post_page-----ae7e7dca82a4---------------------------------------"}}{\fldrslt 
+\fs26 \cf2 \cb11 Text to speech\cb1 \
+}}}

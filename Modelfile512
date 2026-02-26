@@ -1,0 +1,2 @@
+FROM embeddinggemma
+PARAMETER dimensions 512
